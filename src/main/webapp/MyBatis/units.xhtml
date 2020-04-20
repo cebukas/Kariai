@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+<h:head/>
+<h:body>
+    <h2>Army units:</h2>
+    <ol>
+        <ui:repeat value="#{unitsMyBatis.allUnits}" var="unit">
+            <li><h:link value="#{unit.name}" outcome="soldiers?armyunitId=#{unit.id}" /></li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText value="#{unitsMyBatis.unitToCreate.name}" required="true" />
+        <h:commandButton value="Add new unit" action="#{unitsMyBatis.createUnit}" />
+    </h:form>
+    <h:link value="Back to index" outcome="/index"/>
+</h:body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head/>
+<h:body>
+    <h2>Soldiers recruited in #{soldiersForArmyUnit.armyUnit.name} army units:</h2>
+    <ol>
+        <ui:repeat value="#{soldiersForArmyUnit.armyUnit.soldiers}" var="soldier">
+            <li>
+                <h:link value="#{soldier.name} ALSO KNOWN AS #{soldier.undercoverName}" outcome="soldierDetails?soldierId=#{soldier.id}" />
+            </li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText a:placeholder="name" value="#{soldiersForArmyUnit.soldierToCreate.name}" required="true" />
+        <h:commandButton value="Add soldier to the unit" action="#{soldiersForArmyUnit.createSoldier}" >
+            <f:param name="armyUnitId" value="#{soldiersForArmyUnit.armyUnit.id}" />
+        </h:commandButton>
+    </h:form>
+    <h:link outcome="index" value="Back to units page"/>
+</h:body>
+</html>
