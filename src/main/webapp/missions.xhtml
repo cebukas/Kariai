@@ -7,17 +7,17 @@
 <h:body>
     <h2>missions:</h2>
     <ol>
-        <ui:repeat value="#{missions.missions}" var="mission">
+        <ui:repeat value="#{missionsMyBatis.missions}" var="mission">
             <li><b>neim:</b> #{mission.name} <b>kantry:</b> #{mission.country}</li>
             <br></br><span>------------</span>
         </ui:repeat>
     </ol>
     <h2>add a mission to the unit:</h2>
     <h:form>
-        <h:inputText value="#{missions.missionToCreate.name}" required="true" />
-        <h:inputText value="#{missions.missionToCreate.country}" required="true" />
-        <h:commandButton value="add" action="#{missions.createMission}" >
-        <f:param name="armyUnitId" value="#{missions.armyUnits.id}" />
+        <h:inputText value="#{missionsMyBatis.missionToCreate.name}" required="true" />
+        <h:inputText value="#{missionsMyBatis.missionToCreate.country}" required="true" />
+        <h:commandButton value="add" action="#{missionsMyBatis.createMission}" >
+        <f:param name="armyUnitId" value="#{missionsMyBatis.armyunit.id}" />
         </h:commandButton>
     </h:form>
     <h:link outcome="index" value="bek to index"/>

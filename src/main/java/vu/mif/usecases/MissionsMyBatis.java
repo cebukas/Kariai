@@ -3,9 +3,11 @@ package vu.mif.usecases;
 import lombok.Getter;
 import lombok.Setter;
 import vu.mif.myBatis.DAO.ArmyunitMapper;
+import vu.mif.myBatis.DAO.ArmyunitMissionMapper;
 import vu.mif.myBatis.DAO.MissionMapper;
 import vu.mif.myBatis.DAO.SoldierMapper;
 import vu.mif.myBatis.model.Armyunit;
+import vu.mif.myBatis.model.ArmyunitMission;
 import vu.mif.myBatis.model.Mission;
 import vu.mif.myBatis.model.Soldier;
 
@@ -25,11 +27,20 @@ public class MissionsMyBatis {
     @Inject
     private MissionMapper missionMapper;
 
+    @Inject
+    private ArmyunitMissionMapper armyunitMissionMapper;
+
     @Getter @Setter
     private List<Mission> missions;
 
     @Getter @Setter
-    private List<Armyunit> armyunits;
+    private Mission mission;
+
+    @Getter @Setter
+    private Armyunit armyunit;
+
+    @Getter @Setter
+    private ArmyunitMission armyunitMissionToCreate = new ArmyunitMission();
 
     @Getter @Setter
     private Mission missionToCreate = new Mission();
@@ -39,22 +50,27 @@ public class MissionsMyBatis {
     public void init() {
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Long armyUnitId = Long.parseLong(requestParameters.get("armyunitId"));
-        this.armyunits = (List<Armyunit>) unitMapper.selectByPrimaryKey(armyUnitId);
-      //  this.missions = missionMapper.selectByUnit(armyunits);
+        Long armyUnitId = Long.parseLong(requestParameters.get("armyUnitId"));
+
+        this.armyunit =  unitMapper.selectByPrimaryKey(armyUnitId);
+        this.missions = missionMapper.selectByUnit(armyUnitId);
+
     }
 
     @Transactional
-    public String createSoldier() {
+    public String createMission() {
         try{
-         //   soldierToCreate.setArmyunitId(this.armyunit.getId());
-           // soldierMapper.insert(soldierToCreate);
+            missionMapper.insert(missionToCreate);
+
+            armyunitMissionToCreate.setArmyunitsId(this.armyunit.getId());
+            armyunitMissionToCreate.setMissionsMissionid(missionMapper.selectLast().getMissionid());
+           armyunitMissionMapper.insert(armyunitMissionToCreate);
 
         }
         catch (Exception e){
-            //return "/MyBatis/soldiers?faces-redirect=true&armyunitId=" + this.armyunit.getId() + "&faces-redirect=true";
+            return "/missions?faces-redirect=true&armyUnitId=" + this.armyunit.getId() + "&faces-redirect=true";
 
         }
-        return "/MyBatis/soldiers?faces-redirect=true&armyunitId=" + "&faces-redirect=true";
+        return "/missions?faces-redirect=true&armyUnitId="+ this.armyunit.getId()+ "&faces-redirect=true";
     }
 }

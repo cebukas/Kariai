@@ -48,4 +48,5 @@ public interface MissionMapper {
      */
     int updateByPrimaryKey(Mission record);
     List<Mission> selectByUnit(Long id);
+    Mission selectLast();
 }

@@ -28,4 +28,4 @@
     select ARMYUNITS_ID, MISSIONS_MISSIONID
     from PUBLIC.ARMYUNIT_MISSION
   </select>
-</mapper>
+        </mapper>

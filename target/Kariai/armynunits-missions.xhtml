@@ -1,0 +1,17 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head/>
+<h:body style="background: coral">
+    <table border ="1">
+        <ui:repeat value="#{allMissions.armyunitMissionList}" var="listas">
+            <tr>
+                <th>armyunit: #{listas.armyunitsId} mission: #{listas.missionsMissionid}</th>
+            </tr>
+    </ui:repeat>
+    </table>
+    <h:link outcome="index" value="bek to index"/>
+</h:body>
+</html>

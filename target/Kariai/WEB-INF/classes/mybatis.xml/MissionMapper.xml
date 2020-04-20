@@ -61,4 +61,16 @@
     select MISSIONID, COUNTRY, NAME
     from PUBLIC.MISSION
   </select>
+  <select id="selectByUnit" parameterType="java.lang.Long" resultMap="BaseResultMap">
+
+    select PUBLIC.MISSION.MISSIONID, PUBLIC.MISSION.NAME, PUBLIC.MISSION.COUNTRY
+    from PUBLIC.MISSION JOIN PUBLIC.ARMYUNIT_MISSION ON PUBLIC.MISSION.MISSIONID = PUBLIC.ARMYUNIT_MISSION.MISSIONS_MISSIONID
+    where PUBLIC.ARMYUNIT_MISSION.ARMYUNITS_ID = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectLast" resultMap="BaseResultMap">
+
+    select TOP 1 MISSIONID, COUNTRY, NAME
+    from PUBLIC.MISSION ORDER BY MISSIONID DESC
+  </select>
 </mapper>
