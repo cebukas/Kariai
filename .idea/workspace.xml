@@ -6,38 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c467a4e5-ad70-411a-8771-6ec24a03dc3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Kariai.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Kariai_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Kariai_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_192.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_platform_jakarta_jakartaee_api_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_cdi_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vu/mif/usecases/MissionsMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vu/mif/usecases/MissionsMyBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vu/mif/usecases/SoldiersMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vu/mif/usecases/SoldiersMyBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/myBatis/DAO/MissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/myBatis/DAO/MissionMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/myBatis/DAO/SoldierMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/myBatis/DAO/SoldierMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/usecases/SoldiersMyBatis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kariai/WEB-INF/classes/vu/mif/usecases/SoldiersMyBatis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vu/mif/myBatis/DAO/MissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vu/mif/myBatis/DAO/MissionMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vu/mif/myBatis/DAO/SoldierMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vu/mif/myBatis/DAO/SoldierMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vu/mif/persistence/MissionsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vu/mif/usecases/Missions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vu/mif/usecases/SoldiersMyBatis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vu/mif/usecases/SoldiersMyBatis.class" afterDir="false" />
-    </list>
+    <list default="true" id="c467a4e5-ad70-411a-8771-6ec24a03dc3e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/maven-webapp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -167,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587379556471</updated>
       <workItem from="1587379560374" duration="209000" />
-      <workItem from="1587380087691" duration="1039000" />
+      <workItem from="1587380087691" duration="1326000" />
     </task>
     <servers />
   </component>
