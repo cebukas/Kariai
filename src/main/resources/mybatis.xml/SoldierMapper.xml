@@ -59,7 +59,7 @@
     select ID, NAME, ARMYUNIT_ID
     from PUBLIC.SOLDIER
   </select>
-  <select id="selectByTeam" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByUnit" parameterType="java.lang.Long" resultMap="BaseResultMap">
 
     select PUBLIC.SOLDIER.ID, PUBLIC.SOLDIER.NAME, PUBLIC.SOLDIER.ARMYUNIT_ID
     from PUBLIC.SOLDIER JOIN PUBLIC.ARMYUNIT ON PUBLIC.SOLDIER.ARMYUNIT_ID = PUBLIC.ARMYUNIT.ID
